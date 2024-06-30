@@ -10,13 +10,16 @@
     .active{
         background-color: brown;
     }
+    a{
+      text-decoration: none;
+    }
   </style>
   <body>
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-lg-1 col-sm-1 {% if request.path == '/' %}active{% endif %}"><a href="{% url 'index' %}">Index</a></div>
-                <div class="col-lg-1 col-sm-1 {% if request.path == 'home' %}active{% endif %}"><a href="{% url 'home' %}">Home</a></div>
+                <div class="col-lg-1 col-sm-1 text-center rounded-pill {% if request.path == '/' %}active{% endif %}"><a href="{% url 'index' %}">Index</a></div>
+                <div class="col-lg-1 col-sm-1 text-center rounded-pill {% if request.path == '/home/' %}active{% endif %}"><a href="{% url 'home' %}">Home</a></div>
             </div>
         </div>
     </header>
